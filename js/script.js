@@ -1,5 +1,10 @@
 var intro = "Xush kelibsiz!";
 var hero = "Sayohatga chiqishga tayormisiz?";
+var text = "Sizning pulingiz Standart sayohat turiga yetadi!";
+var text2 = "Sizning pulingiz Gold sayohat turiga yetadi!";
+var text3 = "Sizning pulingiz Vip sayohat turiga yetadi!";
+var text4 = "Faqat son kiriting!";
+var text5 = "Uzr sizning pulingiz yetmaydi!";
 
 
 var elBody = document.querySelector("body");
@@ -39,14 +44,19 @@ elForm.addEventListener("submit", function(evt) {
   evt.preventDefault();
 
 if (elInput.value >= 5000000 && elInput.value <= 10000000) {
-  elP.textContent = "Sizning pulingiz Standart sayohat turiga yetadi!"
+  console.log(text);
+  elP.textContent = text;
 } else if (elInput.value >= 10000000 && elInput.value <= 20000000) {
-  elP.textContent = "Sizning pulingiz Gold sayohat turiga yetadi!"
+  console.log(text2);
+  elP.textContent = text2;
 } else if (elInput.value >= 20000000) {
-  elP.textContent = "Sizning pulingiz Vip sayohat turiga yetadi!"
+  console.log(text3);
+  elP.textContent = text3;
 } else if (isNaN(elInput.value)) {
-  elP.textContent = "Faqat son kiriting!"
+  console.log(text4);
+  elP.textContent = text4;
 } else {
-  elP.textContent = "Uzr sizning pulingiz yetmaydi!"
+  console.log(text5);
+  elP.textContent = text5;
 }
 })
